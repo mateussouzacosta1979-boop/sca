@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCA Legal System | Sobral Couto Advogados</title>
+
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/auth.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <section id="login-screen" class="auth-screen">
+    <div class="auth-card">
+      <div class="auth-brand">
+        <img src="./assets/logo-sobral-couto.png" alt="Sobral Couto Advogados" class="auth-logo" />
+        <p>Sistema de Gestão Jurídica</p>
+      </div>
+
+      <form id="login-form" class="auth-form">
+        <label>
+          E-mail
+          <input type="email" id="login-email" placeholder="seuemail@sobralcouto.com.br" autocomplete="email" required />
+        </label>
+
+        <label>
+          Senha
+          <input type="password" id="login-password" placeholder="Digite sua senha" autocomplete="current-password" required />
+        </label>
+
+        <button type="submit" class="btn btn-primary full">Entrar no sistema</button>
+
+        <div id="login-feedback" class="feedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="app-shell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <img src="./assets/logo-sobral-couto.png" alt="Sobral Couto Advogados" />
+        <span>Legal System</span>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Menu principal">
+        <button class="nav-item active" data-route="dashboard">
+          <span class="nav-icon">▣</span>
+          Dashboard
+        </button>
+
+        <div class="nav-group">Comercial</div>
+        <button class="nav-item" data-route="crm">
+          <span class="nav-icon">◇</span>
+          CRM / Atendimentos
+        </button>
+
+        <div class="nav-group">Jurídico</div>
+        <button class="nav-item" data-route="clientes">
+          <span class="nav-icon">□</span>
+          Clientes
+        </button>
+        <button class="nav-item" data-route="processos-casos">
+          <span class="nav-icon">▤</span>
+          Processos e Casos
+        </button>
+        <button class="nav-item" data-route="tarefas-prazos">
+          <span class="nav-icon">◷</span>
+          Prazos e Tarefas
+        </button>
+        <button class="nav-item" data-route="publicacoes">
+          <span class="nav-icon">◫</span>
+          Publicações e Intimações
+        </button>
+        <button class="nav-item" data-route="documentos">
+          <span class="nav-icon">≡</span>
+          Documentos
+        </button>
+
+        <div class="nav-group">Financeiro</div>
+        <button class="nav-item" data-route="financeiro">
+          <span class="nav-icon">◈</span>
+          Financeiro
+        </button>
+
+        <div class="nav-group">Gestão</div>
+        <button class="nav-item" data-route="relatorios">
+          <span class="nav-icon">▧</span>
+          Relatórios
+        </button>
+        <button class="nav-item" data-route="usuarios">
+          <span class="nav-icon">◉</span>
+          Usuários
+        </button>
+        <button class="nav-item" data-route="permissoes">
+          <span class="nav-icon">◌</span>
+          Permissões
+        </button>
+        <button class="nav-item" data-route="configuracoes">
+          <span class="nav-icon">⚙</span>
+          Configurações
+        </button>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Sobral Couto Advogados</span>
+          <h1 id="page-title">Dashboard</h1>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="search-box">
+            <input type="search" placeholder="Pesquisar cliente, processo ou tarefa..." />
+          </div>
+          <button id="logout-button" class="btn btn-outline">Sair</button>
+        </div>
+      </header>
+
+      <section id="view-root" class="view-root"></section>
+    </main>
+  </section>
+</body>
+</html>
